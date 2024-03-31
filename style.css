@@ -1,5 +1,201 @@
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* GENERAL */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+:root {
+    --header-width: 15rem;
+    --footer-height: 5rem;
+    --upgrade-height: 5rem;
+}
+
+.body-container {
+    background-color: red;
+    max-width: 1600px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* HEADER */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+header {
+    width: var(--header-width);
+    height: calc(100vh - var(--footer-height));
+    background-color: black;
+    position: relative;
+}
+
+
+/* 
+header-dekstop
+ */
+.logo-dekstop {
+    padding: 0 1rem;
+}
+
+.logo-dekstop img {
+    background-color: red;
+    height: 5rem;
+    width: 80%;
+    display: block;
+}
+
+.header-dekstop li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    color: #B2B2B2;
+}
+
+.header-dekstop li img {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    filter: invert(30%);
+}
+
+.header-dekstop li span,
+.header-dekstop li {
+    font-size: 0.8rem;
+}
+
+.header-dekstop h4 {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.header-dekstop i {
+    font-size: 2.2rem;
+    margin-right: 0.5rem;
+}
+
+.download-inner-header {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.download-inner-header hr {
+    border-bottom: 1px solid #B2B2B2;
+    margin: 0.2rem 1rem;
+}
+
+.download-inner-header #profile-img {
+    background-color: grey;
+    border-radius: 50%;
+}
+
+/* 
+header-dekstop-hover
+ */
+.header-dekstop li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.header-dekstop li:hover img {
+    filter: invert(0);
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* UPGRADE SECTION */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.upgrade {
+    height: var(--upgrade-height);
+    background-color: green;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.upgrade button {
+    color: white;
+    background-color: #080B12;
+    border: 1px solid white;
+    margin: 1.5rem 0.7rem;
+    padding: 0 1.5rem;
+    border-radius: 5rem;
+}
+
+/* 
+upgrade-button-hover
+ */
+.upgrade button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* NAV SECTION */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.nav {
+    background-color: purple;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #B2B2B2;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem 0.2rem;
+    position: relative;
+}
+
+
+.nav a .green-line {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 0.2rem solid #ACFE2E;
+    width: 30%;
+    display: none;
+}
+
+/* 
+.nav-hover
+ */
+.nav a:hover .green-line {
+    display: block;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* MAIN SECTION */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+main {
+    height: calc(100vh - var(--footer-height));
+    width: calc(100% - var(--header-width));
+    overflow: auto;
+    position: absolute;
+    left: var(--header-width);
+    top: 0;
+}
+
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* FOOTER */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+footer {
+    height: var(--footer-height);
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
 }
